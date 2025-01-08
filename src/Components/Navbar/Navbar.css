@@ -1,0 +1,128 @@
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  z-index: 10;
+  background: white;
+  justify-content: space-around;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+}
+.nav-logo{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-logo img{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 200px;
+  padding-right: 0px;
+  margin-left: -20px;
+  margin-right: 40px;
+}
+.nav-logo p{
+  color: #171717;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.nav-menu{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  color: #626262;
+  font-size: 20px;
+  font-weight: 500;
+  padding-right: 0;
+  margin-left: -20px;
+}
+.nav-menu li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+}
+.nav-menu hr{
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background: #ff4141;
+}
+.nav-login-cart{
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  padding-left: 40px;
+  position: relative;
+}
+.nav-login-cart button{
+  width: 157px;
+  height: 58px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 75px;
+  color: #515151;
+  font-size: 20px;
+  font-weight: 500;
+  background: white;
+  cursor: pointer;
+}
+.nav-login-cart button:active{
+  background: #7a7a7a;
+}
+.nav-login-cart img{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+}
+.nav-cart-count{
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; 
+  top: 70px; 
+  right: -10px; 
+  border-radius: 50%; 
+  font-size: 14px;
+  background: red;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.logo-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.nav-smile {
+  margin-left: 5px; 
+}
+
+.nav-smile img {
+  height: 50px; 
+  width: auto; 
+  position: relative;
+  margin-left: -2px;
+}
+.sub-text{
+  font-size: 20px;
+  font-weight: 400;
+  color: #626262;
+  margin-top: -5px;
+}
+
