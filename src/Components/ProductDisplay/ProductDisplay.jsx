@@ -1,12 +1,27 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './ProductDisplay.css';
 import star_icon from "../Assets/Rating Star Icon.png";
 import star_dull_icon from "../Assets/Dull Star Icon.png";
 import { ShopContext } from '../../Context/ShopContext';
+import Spinner from '../Spinner/Spinner';
 
 const ProductDisplay = (props) => {
     const {product} = props;
     const {addToCart} = useContext(ShopContext);
+    const [isZoomed, setIsZoomed] = useState(false);
+    const toggleZoom = () => {
+      setIsZoomed(!isZoomed);
+    }
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);     
+      }, 2000);
+    }, []);
+    if(loading) {
+      return <Spinner />;
+    }
   return (
     <div className='productdisplay'>
       <div className="productdisplay-left">
@@ -17,7 +32,10 @@ const ProductDisplay = (props) => {
           <img src={product.image} alt="" />
         </div>
         <div className="productdisplay-img">
-          <img className='productdisplay-main-img' src={product.image} alt="" />
+          <img className={`productdisplay-main-img ${isZoomed ? "zoom" : ""}`}
+                        src={product.image}
+                        alt=""
+                        onClick={toggleZoom} />
         </div>
       </div>
       <div className="productdisplay-right">
@@ -57,6 +75,6 @@ const ProductDisplay = (props) => {
       </div>
     </div>
   )
-}
+};
 
 export default ProductDisplay;
