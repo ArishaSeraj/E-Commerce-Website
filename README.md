@@ -51,7 +51,3 @@ Welcome to my **E-Commerce Website** built using **ReactJS**, a modern and dynam
 
 ---
 
-## 🧩 **How to Use**
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/YourUsername/E-Commerce-Website.git
